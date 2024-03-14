@@ -1,8 +1,8 @@
-const Card = () => {
+const Card = ({ country }) => {
   return (
     <div className="card">
-        <p>Image Goes here</p>
-        <p>name of pokemon</p>
+        <img src={country.flags.png} alt="country flag" />
+        <p>{country.name.common}</p>
     </div>
   )
 };
