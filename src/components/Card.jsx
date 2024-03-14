@@ -1,3 +1,5 @@
+import '../styles/Card.css';
+
 const Card = ({ country }) => {
   return (
     <div className="card">

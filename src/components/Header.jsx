@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <div id="header">
-        <h1>Pokemon Memory Game</h1>
+        <h1>Country Flag Memory Game</h1>
     </div>
   )
 };
