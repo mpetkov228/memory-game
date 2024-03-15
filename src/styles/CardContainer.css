@@ -3,4 +3,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+img {
+    height: 140px;
+    width: 260px;
 }
