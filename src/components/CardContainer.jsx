@@ -11,7 +11,15 @@ const CardContainer = () => {
     fetch('https://restcountries.com/v3.1/all')
       .then(response => response.json())
       .then(data => {
-        setCountries(data.slice(30, 42))
+        const newData = data.slice(30, 42).map(country => {
+          return {
+            ccn3: country.ccn3,
+            name: country.name.common,
+            flag: country.flags.png,
+            isClicked: false,
+          };
+        });
+        setCountries(newData);
         setIsLoading(false);
       })
       .catch(error => console.error(error));
@@ -29,7 +37,7 @@ const CardContainer = () => {
         return (
           <Card
             key={country.ccn3}
-            country={country} 
+            country={country}
           />
         )
       })}
