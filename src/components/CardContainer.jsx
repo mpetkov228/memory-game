@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import '../styles/CardContainer.css';
+import shuffleArray from '../utils/arrayShuffle';
 
 const Card = ({ country, onClick }) => {
   
@@ -37,9 +38,9 @@ const CardContainer = () => {
   const handleClick = (countryId) => {
     const country = countries.find(c => c.id == countryId);
     if (country.clicked) {
-      const updatedData = countries.map(country => {
+      const updatedData = shuffleArray(countries.map(country => {
           return { ...country, clicked: false };  
-      });
+      }));
       setScore(0);
       setCountries(updatedData);
     } else {
