@@ -1,17 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import '../styles/CardContainer.css';
 import shuffleArray from '../utils/arrayShuffle';
-
-const Card = ({ country, onClick }) => {
-  
-  return (
-    <div className="card" onClick={onClick}>
-        <img src={country.flag} alt="country flag" />
-        <p>{country.name}</p>
-    </div>
-  )
-};
+import Card from './Card';
+import '../styles/CardContainer.css';
 
 
 const CardContainer = () => {
@@ -46,6 +37,7 @@ const CardContainer = () => {
     } else {
       country.clicked = true;
       setScore(score + 1);
+      setCountries(shuffleArray(countries));
     }
 
   }
