@@ -1,6 +1,7 @@
 
 import './App.css';
 import CardContainer from './components/CardContainer';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -9,9 +10,7 @@ function App() {
   return (
     <div className="app">
       <CardContainer />
-      <div className="footer">
-        <p>MY GITHUB ETC</p>
-      </div>
+      <Footer />
     </div>
   )
 }
