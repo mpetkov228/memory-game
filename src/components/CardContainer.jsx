@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import shuffleArray from '../utils/arrayShuffle';
+import Header from './Header';
 import Card from './Card';
 import '../styles/CardContainer.css';
 
@@ -8,6 +9,7 @@ import '../styles/CardContainer.css';
 const CardContainer = () => {
   const [countries, setCountries] = useState([]);
   const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
@@ -33,6 +35,7 @@ const CardContainer = () => {
           return { ...country, clicked: false };  
       }));
       setScore(0);
+      setBestScore(score);
       setCountries(updatedData);
     } else {
       country.clicked = true;
@@ -44,7 +47,7 @@ const CardContainer = () => {
 
   return (
     <>
-      <h2>Score: {score}</h2>
+      <Header score={score} bestScore={bestScore} />
       <div id="card-container">
         {countries.map((country) => {
           return (

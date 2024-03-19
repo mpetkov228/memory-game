@@ -1,0 +1,24 @@
+.card {
+    padding: 20px;
+    cursor: pointer;
+    background-color: gold;
+    border-radius: 5px;
+    align-self: start;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px hsl(0, 74%, 70%);
+}
+
+.country-flag {
+    height: 130px;
+    width: 250px;
+    border: 1px solid gray;
+}
+
+.country-name {
+    color: #9e1818;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}

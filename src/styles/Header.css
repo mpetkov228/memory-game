@@ -1,0 +1,28 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #680e0e;
+}
+
+.game-title {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    font-weight: bold;
+}
+
+.score {
+    margin-left: 42px;
+}
+
+.best-score {
+    margin-left: 6px;
+}

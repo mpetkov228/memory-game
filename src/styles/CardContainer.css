@@ -1,16 +1,7 @@
 #card-container {
-    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-}
-
-.card {
-    cursor: pointer;
-}
-
-img {
-    height: 140px;
-    width: 260px;
+    gap: 20px;
+    flex: 2;
 }
